@@ -1,8 +1,8 @@
-# LAB - 
+# LAB - 16
 
-## Project Name
+## Project Event Driven Application
 
-### Author: Student/Group Name
+### Author: Ai
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
@@ -11,36 +11,36 @@
 * [front-end](http://xyz.com) (when applicable)
 
 #### Documentation
-* [api docs](http://xyz.com) (API servers)
+* [api docs](./) (API servers)
 * [jsdoc](http://xyz.com) (Server assignments)
 * [styleguide](http://xyz.com) (React assignments)
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+#### `event.js`
+##### exports events which is an instance of `new Event();`
+#### `logger.js`
+##### event.on() will be listening for and reacting to any `error` and any `fs.write`.
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+###### `event.on()`
+This is our listener, we are going to create a handler function to be used as a callback for this function
 
-###### `bar(array) -> array`
-Usage Notes or examples
+###### `event.emit()`
+This is our emitter--it sends out the change that will trigger the listener and it's embedded handler
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* no special .env requirements yet.
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* `node app.js`
+* Endpoint: `/app/`
+  * Runs our fs read and write.
+
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
+* Run tests by running `npm test` in your terminal
+* This test is not yet created! So don't try 👆that yet!
 * What assertions need to be / should be made?
 
 #### UML
-Link to an image of the UML for your application and response to events
+![My best guess](./edaURL.jpg)
