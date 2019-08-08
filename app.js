@@ -1,14 +1,22 @@
 'use strict';
 
+/**
+ * API Server Module
+ * @module ./app
+ */
+
 const fs = require('fs');
+const events = require('./event.js');
+const logger = require('./logger.js');
 
 const alterFile = (file) => {
   fs.readFile( file, (err, data) => {
-    if(err) { throw err; }
+    if(err) { events.emit('err', err); }
     let text = data.toString().toUpperCase();
     fs.writeFile( file, Buffer.from(text), (err, data) => {
-      if(err) { throw err; }
-      console.log(`${file} saved`);
+      if(err) { events.emit('err', err);}
+      events.emit('write', `${file} saved`);
+      // console.log(`${file} saved`);
     });
   });
 };

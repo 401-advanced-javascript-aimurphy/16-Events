@@ -4,11 +4,13 @@
   "description": "Events Lab",
   "main": "app.js",
   "scripts": {
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "jsdoc": "^3.6.3"
   }
 }
