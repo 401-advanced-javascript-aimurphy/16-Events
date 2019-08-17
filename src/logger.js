@@ -4,7 +4,7 @@
  * @module ./logger
  */
 
-const events = require('./event.js');
+const events = require('./src/event.js/index.js');
 
 
 events.on('err', payload=>doLog('err', payload));
