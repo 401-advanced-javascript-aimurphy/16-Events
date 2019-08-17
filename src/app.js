@@ -6,8 +6,8 @@
  */
 
 const fs = require('fs');
-const events = require('./event.js');
-const logger = require('./logger.js');
+const events = require('./event.js/index.js');
+const logger = require('./logger.js/index.js');
 
 const alterFile = (file) => {
   fs.readFile( file, (err, data) => {
